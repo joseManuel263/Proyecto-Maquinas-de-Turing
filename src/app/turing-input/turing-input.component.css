@@ -1,0 +1,26 @@
+.tape {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+    span {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin: 0 2px;
+      font-size: 1.5rem;
+      min-width: 30px;
+      text-align: center;
+      position: relative;
+      
+      &.active {
+        background-color: #ffeb3b;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .state {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  

@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Seleccione el Modelo de Máquina de Turing</h2>
+    <div class="form-group">
+      <label for="machineType">Tipo de Máquina</label>
+      <select id="machineType" class="form-control" [(ngModel)]="selectedModel">
+        <option value="nondeterministic">Máquina No Determinista</option>
+        <option value="universal">Máquina Universal</option>
+      </select>
+    </div>
+  
+    <button class="btn btn-primary mt-3" (click)="onModelSelect()">Confirmar Selección</button>
+  
+    <div *ngIf="selectedModel === 'nondeterministic'" class="mt-4">
+      <app-turing-input></app-turing-input>
+    </div>
+  
+    <div *ngIf="selectedModel === 'universal'" class="mt-4">
+      <app-turing-universal></app-turing-universal>
+    </div>
+  </div>
+  
