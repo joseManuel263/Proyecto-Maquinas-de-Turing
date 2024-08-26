@@ -1,0 +1,43 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav [opened]="opened" mode="side">
+    <mat-nav-list>
+
+        <li class="link_container">
+            <a routerLink="/inicio" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: false}">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                <span class="link-name">Inicio</span>
+            </a>
+        </li>
+
+      <li class="link_container">
+        <a
+          routerLink="/turing-input"
+          routerLinkActive="link-active"
+          [routerLinkActiveOptions]="{ exact: false }"
+        >
+          <span class="material-symbols-outlined">laptop_windows</span>
+          <span class="link-name">Turing no determinista</span>
+        </a>
+      </li>
+
+      <li class="link_container">
+        <a
+          routerLink="/turing-universal"
+          routerLinkActive="link-active"
+          [routerLinkActiveOptions]="{ exact: false }"
+        >
+          <span class="material-symbols-outlined">laptop_chromebook</span>
+          <span class="link-name">Turing Universal</span>
+        </a>
+      </li>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

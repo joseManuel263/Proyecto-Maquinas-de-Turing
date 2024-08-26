@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-drawer-content{
+    height: 100vh !important; 
+    width: 100vh !important;
+    
+    background-color: #1f1f47;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.contenedor{
+    position: relative;
+    .este{
+        position: fixed;
+        right: 0;
+
+    }
+}
+
+
