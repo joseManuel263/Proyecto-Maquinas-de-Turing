@@ -1,57 +1,50 @@
-<div class="container mt-4">
-    <h2>Simulación de la Máquina de Turing</h2>
-    <form (ngSubmit)="onSubmit()" #turingForm="ngForm">
-      <!-- Campo para los estados -->
-      <div class="form-group">
-        <label for="states">Estados</label>
-        <input type="text" id="states" class="form-control" required [(ngModel)]="states" name="states" placeholder="Ej. q0,q1,q2">
-      </div>
-  
-      <!-- Campo para el alfabeto -->
-      <div class="form-group mt-3">
-        <label for="alphabet">Alfabeto</label>
-        <input type="text" id="alphabet" class="form-control" required [(ngModel)]="alphabet" name="alphabet" placeholder="Ej. 0,1,_">
-      </div>
-  
-      <!-- Campo para el estado inicial -->
-      <div class="form-group mt-3">
-        <label for="initialState">Estado Inicial</label>
-        <input type="text" id="initialState" class="form-control" required [(ngModel)]="initialState" name="initialState" placeholder="Ej. q0">
-      </div>
-  
-      <!-- Campo para los estados de aceptación -->
-      <div class="form-group mt-3">
-        <label for="acceptanceStates">Estados de Aceptación</label>
-        <input type="text" id="acceptanceStates" class="form-control" required [(ngModel)]="acceptanceStates" name="acceptanceStates" placeholder="Ej. q2">
-      </div>
-  
-      <!-- Campo para las transiciones -->
-      <div class="form-group mt-3">
-        <label for="transitions">Transiciones</label>
-        <textarea id="transitions" class="form-control" required [(ngModel)]="transitionsInput" name="transitions" placeholder="Ej. q0,0,q1,1,R"></textarea>
-        <small class="form-text text-muted">Formato: currentState,readSymbol,nextState,writeSymbol,moveDirection</small>
-      </div>
-  
-      <!-- Campo para la entrada -->
-      <div class="form-group mt-3">
-        <label for="input">Entrada</label>
-        <input type="text" id="input" class="form-control" required [(ngModel)]="input" name="input" placeholder="Ej. 0101">
-      </div>
-  
-      <button type="submit" class="btn btn-primary mt-3">Simular</button>
-    </form>
-  
-    <div *ngIf="executionSteps.length > 0" class="mt-4">
-      <h3>Resultados de la Simulación:</h3>
-      <ul>
-        <li *ngFor="let step of executionSteps">
-          <p>Cinta: {{ step.tape.join('') }}</p>
-          <p>Posición del cabezal: {{ step.headPosition }}</p>
-          <p>Estado actual: {{ step.currentState }}</p>
-          <p *ngIf="step.accepted">La máquina acepta la cadena.</p>
-          <p *ngIf="!step.accepted">La máquina rechaza la cadena.</p>
-        </li>
-      </ul>
+<div class="container">
+  <h2>Simulación de la Máquina de Turing</h2>
+  <form (ngSubmit)="onSubmit()" #turingForm="ngForm">
+    <div class="form-group">
+      <label for="states">Estados</label>
+      <input type="text" id="states" required [(ngModel)]="states" name="states" placeholder="Ej. q0,q1,q2">
     </div>
+
+    <div class="form-group">
+      <label for="alphabet">Alfabeto</label>
+      <input type="text" id="alphabet" required [(ngModel)]="alphabet" name="alphabet" placeholder="Ej. 0,1,_">
+    </div>
+
+    <div class="form-group">
+      <label for="initialState">Estado Inicial</label>
+      <input type="text" id="initialState" required [(ngModel)]="initialState" name="initialState" placeholder="Ej. q0">
+    </div>
+
+    <div class="form-group">
+      <label for="acceptanceStates">Estados de Aceptación</label>
+      <input type="text" id="acceptanceStates" required [(ngModel)]="acceptanceStates" name="acceptanceStates" placeholder="Ej. q2">
+    </div>
+
+    <div class="form-group">
+      <label for="transitions">Transiciones</label>
+      <textarea id="transitions" required [(ngModel)]="transitionsInput" name="transitions" placeholder="Ej. q0,0,q1,1,R"></textarea>
+      <small class="helper-text">Formato: currentState,readSymbol,nextState,writeSymbol,moveDirection</small>
+    </div>
+
+    <div class="form-group">
+      <label for="input">Entrada</label>
+      <input type="text" id="input" required [(ngModel)]="input" name="input" placeholder="Ej. 0101">
+    </div>
+
+    <button type="submit">Simular</button>
+  </form>
+
+  <div *ngIf="executionSteps.length > 0" class="results">
+    <h3>Resultados de la Simulación:</h3>
+    <ul>
+      <li *ngFor="let step of executionSteps">
+        <p>Cinta: {{ step.tape.join('') }}</p>
+        <p>Posición del cabezal: {{ step.headPosition }}</p>
+        <p>Estado actual: {{ step.currentState }}</p>
+        <p *ngIf="step.accepted">La máquina acepta la cadena.</p>
+        <p *ngIf="!step.accepted">La máquina rechaza la cadena.</p>
+      </li>
+    </ul>
   </div>
-  
+</div>

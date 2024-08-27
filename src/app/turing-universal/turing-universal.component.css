@@ -1,4 +1,56 @@
-button{
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #ddd;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 4px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+textarea {
+    height: 100px;
+}
+
+.helper-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+button {
     background: black;
     cursor: pointer;
     border: none;
@@ -7,14 +59,16 @@ button{
     font-size: 16px;
     font-weight: bold;
     position: relative;
-    border: 12px;
-}
-button:hover {
-    background: white; /* Cambia el fondo a blanco */
-    color: black; /* Cambia el texto a negro */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-button::before{
+button:hover {
+    background: white;
+    color: black;
+}
+
+button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -29,30 +83,33 @@ button::before{
     animation: glowing 20s linear infinite;
 }
 
-@keyframes glowing{
-    0%{
+@keyframes glowing {
+    0% {
         background-position: 0 0;
     }
-    50%{
+    50% {
         background-position: 400% 0;
     }
-    100%{
+    100% {
         background-position: 0 0;
     }
+}.results {
+    margin-top: 30px;
 }
 
-
-.container {
-    color: white; /* Cambia el color del texto a blanco */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.form-control {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro para los campos */
-    color: white; /* Color del texto en los campos */
+li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
 }
 
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6); /* Color del texto del placeholder */
+li p {
+    color: #e0e0e0; /* Un gris claro para mejor legibilidad */
+    margin: 5px 0;
 }
-
-
