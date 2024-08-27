@@ -1,0 +1,106 @@
+datos de prueba
+
+Por supuesto, puedo proporcionarte 5 ejemplos para ingresar en la máquina de Turing universal. Estos ejemplos incluirán la configuración de la máquina y una entrada de prueba. Ten en cuenta que estos son ejemplos simples para ilustrar el funcionamiento:
+
+1. Máquina que acepta cadenas con igual número de 0s y 1s:
+
+   Estados: q0,q1,q2,q3
+   Alfabeto: 0,1,X,Y,_
+   Estado Inicial: q0
+   Estados de Aceptación: q3
+   Transiciones:
+   q0,0,q1,X,R
+   q0,1,q2,Y,R
+   q0,,q3,,R
+   q1,0,q1,0,R
+   q1,1,q1,1,R
+   q1,Y,q1,Y,R
+   q1,,q0,,L
+   q2,0,q2,0,R
+   q2,1,q2,1,R
+   q2,X,q2,X,R
+   q2,,q0,,L
+   Entrada: 01010101
+
+2. Máquina que acepta cadenas de la forma 0^n1^n (n ceros seguidos de n unos):
+
+   Estados: q0,q1,q2,q3
+   Alfabeto: 0,1,X,Y,_
+   Estado Inicial: q0
+   Estados de Aceptación: q3
+   Transiciones:
+   q0,0,q0,X,R
+   q0,Y,q0,Y,R
+   q0,1,q1,Y,L
+   q1,0,q1,0,L
+   q1,X,q1,X,L
+   q1,Y,q1,Y,L
+   q1,,q2,,R
+   q2,X,q2,X,R
+   q2,Y,q2,Y,R
+   q2,,q3,,R
+   Entrada: 000111
+
+3. Máquina que acepta palíndromos binarios:
+
+   Estados: q0,q1,q2,q3,q4
+   Alfabeto: 0,1,X,_
+   Estado Inicial: q0
+   Estados de Aceptación: q4
+   Transiciones:
+   q0,0,q1,X,R
+   q0,1,q2,X,R
+   q0,,q4,,R
+   q1,0,q1,0,R
+   q1,1,q1,1,R
+   q1,,q3,,L
+   q2,0,q2,0,R
+   q2,1,q2,1,R
+   q2,,q3,,L
+   q3,0,q0,X,L
+   q3,1,q0,X,L
+   q3,X,q3,X,L
+   Entrada: 1001001
+
+4. Máquina que suma 1 a un número binario:
+
+   Estados: q0,q1,q2
+   Alfabeto: 0,1,_
+   Estado Inicial: q0
+   Estados de Aceptación: q2
+   Transiciones:
+   q0,0,q0,0,R
+   q0,1,q0,1,R
+   q0,,q1,,L
+   q1,0,q2,1,L
+   q1,1,q1,0,L
+   q1,_,q2,1,R
+   Entrada: 1011
+
+5. Máquina que acepta cadenas de la forma a^nb^nc^n:
+
+   Estados: q0,q1,q2,q3,q4,q5
+   Alfabeto: a,b,c,X,Y,Z,_
+   Estado Inicial: q0
+   Estados de Aceptación: q5
+   Transiciones:
+   q0,a,q0,X,R
+   q0,Y,q0,Y,R
+   q0,b,q1,Y,R
+   q1,b,q1,b,R
+   q1,Z,q1,Z,R
+   q1,c,q2,Z,L
+   q2,b,q2,b,L
+   q2,Y,q2,Y,L
+   q2,X,q3,X,R
+   q3,Y,q3,Y,R
+   q3,b,q3,b,R
+   q3,Z,q3,Z,R
+   q3,,q4,,L
+   q4,Z,q4,Z,L
+   q4,Y,q4,Y,L
+   q4,X,q4,X,L
+   q4,,q5,,R
+   Entrada: aaabbbccc
+
+Estos ejemplos cubren diferentes tipos de operaciones y reconocimiento de patrones. Puedes usar estos para probar tu máquina de Turing universal y ver cómo maneja diferentes tipos de problemas.
