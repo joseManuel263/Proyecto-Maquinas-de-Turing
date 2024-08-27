@@ -15,7 +15,7 @@ Este proyecto es una aplicación web que simula el comportamiento de dos tipos d
 ## Tecnologías utilizadas
 
 - Angular v18.2.0: Framework para la construcción de la aplicación.
-- Angular Materia v18.2.1l: Librería de componentes de UI basada en Material Design.
+- Angular Materia v18.2.1: Librería de componentes de UI basada en Material Design.
 - TypeScript: Lenguaje de programación utilizado en Angular.
 - HTML/CSS: Para la estructura y el estilo básico de la aplicación.
 
