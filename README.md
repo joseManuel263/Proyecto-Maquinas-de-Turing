@@ -49,7 +49,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
     
 5. Abre tu navegador en http://localhost:4200/ para ver la aplicación en acción.
 
-##Acceder a través de Netlify 
+## Acceder a través de Netlify 
 Abre tu navegador y accede a https://maquinasdeturing.netlify.app/
 
 ## Uso
@@ -57,16 +57,6 @@ Abre tu navegador y accede a https://maquinasdeturing.netlify.app/
 1. Selecciona el tipo de Máquina de Turing que deseas simular (Universal o No Determinista).
 2. Introduce la configuración inicial, como la cinta, el estado inicial y la tabla de transición.
 3. Ejecuta la simulación para ver cómo la máquina procesa la entrada.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
-
-1. Haz un fork del proyecto.
-2. Crea una nueva rama (git checkout -b mi-nueva-rama).
-3. Realiza los cambios necesarios y haz commit (git commit -am 'Descripción de cambios').
-4. Sube los cambios (git push origin mi-nueva-rama).
-5. Crea un pull request en GitHub.
 
 ## Licencia
 
